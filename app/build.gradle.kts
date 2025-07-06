@@ -4,8 +4,16 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("org.sonarqube") version "6.2.0.5505"
 }
 
+sonar {
+    properties {
+        property("sonar.projectKey", "asifj96_SuperAppCompose")
+        property("sonar.organization", "asifj96")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
+}
 android {
     namespace = "com.learning.superapp"
     compileSdk = 36
